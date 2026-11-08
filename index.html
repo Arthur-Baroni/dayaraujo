@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+  Declaração do tipo de documento HTML5.
+  Isso informa ao navegador que o arquivo é um documento HTML moderno.
+-->
+<html lang="pt-BR">
+  <!--
+    A tag html representa a raíz do documento.
+    O atributo lang="pt-BR" define o idioma da página em português do Brasil.
+  -->
+  <head>
+    <!--
+      O head contém metadados, configurações e arquivos externos da página.
+      Essas informações não aparecem diretamente na tela, mas influenciam o comportamento e a aparência do site.
+    -->
+    <meta charset="UTF-8" />
+    <!--
+      Define a codificação de caracteres como UTF-8.
+      Isso permite que acentos e letras com caracteres especiais apareçam corretamente.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Configura a responsividade da página.
+      width=device-width faz a página acompanhar a largura da tela do dispositivo.
+      initial-scale=1.0 mantém a escala inicial em 100%.
+    -->
+    <title>Day Summer</title>
+    <!--
+      Título que aparece na aba do navegador.
+      Neste caso, o nome da marca é Day Summer.
+    -->
+    <meta name="description" content="Loja de moda praia Day Summer" />
+    <!--
+      Descrição resumida da página para mecanismos de busca e compartilhamentos.
+      Ajuda a SEO e aparece em previews de busca.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--
+      Preconecta à fonte do Google para melhorar a velocidade de carregamento.
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      Conecta também ao domínio do Google Fonts para carregar a fonte com mais eficiência.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!--
+      Importa as fontes Playfair Display e Montserrat, usadas para dar um visual elegante e sofisticado.
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <!--
+      Vincula o arquivo CSS que contém todos os estilos visuais da página.
+    -->
+  </head>
+
+  <body id="topo">
+    <!--
+      O body contém todo o conteúdo visível da página.
+      Aqui estão os elementos que aparecem para o usuário.
+    -->
+    <div class="page-shell">
+      <!--
+        Container principal da página.
+        Ele organiza o layout geral e ajuda a manter tudo em um único bloco visual.
+      -->
+      <header class="topbar">
+        <!--
+          Cabeçalho da página.
+          É a área superior onde fica a marca e a navegação principal.
+        -->
+        <div class="brand-wrap">
+          <!--
+            Agrupa o símbolo e o nome da marca para ficarem alinhados.
+          -->
+          <img class="brand-logo" src="imagens/logo_maior.png" alt="Day Araujo Summer" />
+          <!--
+            Nome da marca em destaque.
+            A fonte serif deixa a marca com aparência mais premium e elegante.
+          -->
+        </div>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <!--
+            Menu principal de navegação da página.
+            aria-label ajuda leitores de tela a identificar a navegação.
+          -->
+          <a href="#topo">Home</a>
+          <!--
+            Link para a página inicial ou seção inicial.
+          -->
+          <a href="catalogo.html">Coleções</a>
+          <!--
+            Link para acionar a área de coleções da marca.
+          -->
+          <a href="#historia">Sobre nós</a>
+          <!--
+            Link para a seção de história da marca.
+          -->
+          <a href="#contato">Contato</a>
+          <!--
+            Link para entrar em contato com a loja.
+          -->
+        </nav>
+      </header>
+
+      <main>
+        <!--
+          Main é o conteúdo principal da página.
+          Aqui ficam as seções importantes do site.
+        -->
+        <section class="hero" aria-label="Banner principal">
+          <!--
+            Hero section é a primeira grande área visual da página.
+            Serve como banner principal para chamar atenção do visitante.
+          -->
+          <img class="hero-logo" src="imagens/logo_maior.png" alt="Day Araujo Summer" />
+          <!--
+            Exibe o logo oficial da marca no destaque principal.
+          -->
+        </section>
+
+        <section class="featured reveal">
+          <!--
+            Seção de destaques dos produtos mais relevantes da marca.
+          -->
+          <h2 class="reveal">DESTAQUES</h2>
+          <!--
+            Título da seção.
+          -->
+
+          <div class="product-grid">
+            <!--
+              Container em grid para organizar os produtos em colunas.
+              Isso facilita a visualização em telas maiores e menores.
+            -->
+            <article class="product-card reveal">
+              <!--
+                Cada article representa um produto individual.
+              -->
+              <img src="imagens/b1.jpeg" alt="Biquíni cali" />
+              <!--
+                Imagem do produto.
+                O atributo alt descreve a imagem para acessibilidade.
+              -->
+              <h3>BIQUÍNI CALI</h3>
+              <!--
+                Nome do produto.
+              -->
+              <p>R$ 149,90</p>
+              <!--
+                Preço do item.
+              -->
+              <button type="button">VER DETALHES</button>
+              <!--
+                Botão de ação para ver mais informações sobre o produto.
+              -->
+            </article>
+
+            <article class="product-card">
+              <img src="imagens/b2.jpeg" alt="Maiô breece" />
+              <h3>MAIÔ BREEZE</h3>
+              <p>R$ 189,90</p>
+              <button type="button">VER DETALHES</button>
+            </article>
+
+            <article class="product-card">
+              <img src="imagens/b4.jpg" alt="Biquíni rio" />
+              <h3>BIQUÍNI RIO</h3>
+              <p>R$ 149,90</p>
+              <button type="button">VER DETALHES</button>
+            </article>
+
+            <article class="product-card">
+              <img src="imagens/b3.jpeg" alt="Maiô costa" />
+              <h3>MAIÔ COSTA</h3>
+              <p>R$ 189,00</p>
+              <button type="button">VER DETALHES</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="story reveal" aria-label="Nossa história" id="historia">
+          <!--
+            Seção de apresentação da marca.
+            Aqui a loja explica sua origem e sua visão.
+          -->
+          <div class="story-image reveal">
+            <!--
+              Bloco da imagem ilustrativa da história da marca.
+            -->
+            <img src="imagens/logo_maior.png" />
+            <!--
+              Imagem relacionada ao estilo de vida da marca e ao ambiente marítimo.
+            -->
+          </div>
+
+          <div class="story-copy reveal">
+            <h2>NOSSA HISTÓRIA</h2> 
+            <p>
+              A Day Summer nasceu da paixão pelo mar e pela beleza autêntica da natureza.
+              Nossa coleção é feita para celebrar o estilo e a liberdade de viver cada
+              momento com leveza, conforto e sofisticação. Cada peça combina qualidade,
+              design e uma essência tropical que acompanha o ritmo da sua rotina.
+            </p>
+          </div>
+        </section>
+
+        <section class="choice-banner reveal" aria-label="Escolha a marca">
+          <div class="choice-copy">
+            <h3>ESCOLHA CONFORTO E BELEZA</h3>
+            <p>
+              Escolher a Day Summer é apostar em peças pensadas para realçar seu estilo,
+              mantendo conforto, qualidade e presença em cada detalhe. Nossa coleção foi
+              criada para acompanhar o seu dia com leveza, autenticidade e sofisticação.
+            </p>
+            <ul>
+              <li>Materiais selecionados para conforto e durabilidade.</li>
+              <li>Atendimento atento e personalizado em cada etapa.</li>
+              <li>Estilo que une praia, elegância e praticidade.</li>
+            </ul>
+          </div>
+
+          <div class="choice-image">
+            <img src="imagens/b5.jpg" alt="Modelo em ambiente tropical" />
+          </div>
+        </section>
+
+        <section class="quality-banner reveal" aria-label="Qualidade e atendimento">
+          <div class="quality-content">
+            <h3>QUALIDADE E ATENDIMENTO</h3>
+            <p>
+              Selecionamos cada peça com atenção aos materiais, conforto e acabamento,
+              oferecendo uma experiência de compra atenciosa, segura e personalizada para
+              que você se sinta bem em cada momento.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer reveal" id="contato">
+        <img class="footer-logo reveal" src="imagens/logo_maior.png" alt="Day Araujo Summer" />
+
+        <div class="footer-links reveal">
+          <a href="#topo" class="footer-link">Home</a>
+          <a href="#historia" class="footer-link">Sobre nós</a>
+          <a href="https://www.instagram.com/dayaraujosummer/" target="_blank" rel="noreferrer" class="footer-button">Instagram</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

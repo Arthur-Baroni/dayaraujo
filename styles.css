@@ -1,0 +1,546 @@
+/*
+  Arquivo CSS principal da página Day Summer.
+  Aqui ficam todas as regras de estilo visual do site.
+  O objetivo é deixar a página bonita, organizada e responsiva.
+*/
+
+:root {
+  /*
+    Define as cores principais da marca para facilitar manutenção.
+    Cada variável representa uma cor usada em vários elementos do projeto.
+  */
+  --bg: #f3f2ef;
+  --panel: #f0efeb;
+  --card: #f9f8f5;
+  --text: #2f2f2f;
+  --muted: #666666;
+  --line: #ded8d0;
+  --ocean: #8bd3d8;
+  --ocean-deep: #3baac7;
+  --sand: #f3e3cf;
+  --button: #f8f5f0;
+  --shadow: rgba(36, 44, 47, 0.12);
+}
+
+* {
+  /*
+    Aplica borda-box em todos os elementos.
+    Isso garante que padding e border não aumentem a largura dos elementos.
+  */
+  box-sizing: border-box;
+}
+
+html {
+  /*
+    Habilita rolagem suave quando o usuário clica em links internos da página.
+  */
+  scroll-behavior: smooth;
+}
+
+html, body {
+  /*
+    Reset básico do documento.
+    Remove margens e define a largura e altura base.
+  */
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #e7e5e0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+}
+
+body {
+  /*
+    Garante que o corpo da página tenha ao menos a altura da tela.
+  */
+  min-height: 100vh;
+}
+
+img {
+  /*
+    Faz com que as imagens não ultrapassem o tamanho do container.
+  */
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  /*
+    Herda a fonte dos elementos pai para manter consistência visual.
+  */
+  font: inherit;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: revealUp 0.9s ease forwards;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-shell {
+  /*
+    Container principal da página.
+    Define largura total e organiza tudo em um único bloco visual.
+  */
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  box-shadow: none;
+}
+
+.topbar {
+  /*
+    Barra superior com fundo translúcido e divisória inferior.
+    Mantém a marca e o menu no topo da página.
+  */
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.15);
+}
+
+.brand-wrap {
+  /*
+    Alinha o logo e a marca em uma linha.
+  */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 72px;
+}
+
+.topbar .brand-logo {
+  display: block;
+  width: auto;
+  height: 68px;
+  object-fit: contain;
+  transform: scale(1.7);
+  transform-origin: left center;
+}
+
+.main-nav {
+  /*
+    organiza os links do menu horizontalmente.
+  */
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a {
+  /*
+    Estilo dos links do menu.
+    Letras em caixa alta, sem sublinhado e com espaçamento elegante.
+  */
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.hero {
+  /*
+    Banner principal da página.
+    Tem imagem de fundo, centro de conteúdo e sensação de praia.
+  */
+  position: relative;
+  height: 42vh;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(8, 35, 48, 0.42), rgba(5, 43, 58, 0.54)),
+    url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  width: 430px;
+  height: 260px;
+  object-fit: contain;
+}
+
+.hero-title {
+  /*
+    Nome da marca no banner principal.
+    O texto grande e espaçado reforça o foco visual da página.
+  */
+  position: relative;
+  z-index: 1;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 1px 12px rgba(36, 44, 47, 0.18);
+}
+
+.featured {
+  /*
+    Seção de destaques com fundo levemente transparente.
+  */
+  background: rgba(255, 255, 255, 0.16);
+  padding: 34px 30px 18px;
+  width: 100%;
+}
+
+.featured h2 {
+  /*
+    Estilo do título da seção de destaques.
+  */
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 1.95rem;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.product-grid {
+  /*
+    Cria uma grade responsiva para os produtos.
+    Em telas grandes, aparecem 4 itens por linha.
+  */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.product-card {
+  /*
+    Define o bloco de cada produto.
+    Esse elemento funciona como cartão com borda e fundo leve.
+  */
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--line);
+  padding: 10px 10px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.product-card img {
+  /*
+    Ajusta as imagens dos produtos para ficarem uniformes.
+  */
+  width: 100%;
+  aspect-ratio: 1 / 1.1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  /*
+    Nome do produto em caixa alta, com fonte discreta e organizada.
+  */
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.product-card p {
+  /*
+    Estilo do preço do produto.
+  */
+  margin: 12px 0 14px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.product-card button {
+  /*
+    Botão para ver detalhes do produto.
+    Mantém o visual minimalista e elegante.
+  */
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 10px 14px;
+  background: transparent;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  cursor: pointer;
+}
+
+.story {
+  /*
+    Seção de história da marca.
+    Divide em imagem e texto para criar uma composição visual equilibrada.
+  */
+  display: grid;
+  grid-template-columns: 1.05fr 1.2fr;
+  gap: 30px;
+  align-items: center;
+  padding: 28px 30px 34px;
+  background: rgba(255, 255, 255, 0.06);
+  width: 100%;
+}
+
+.story-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.story-image img {
+  /*
+    Ajusta a imagem da seção de história.
+  */
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  padding: 18px;
+}
+
+.story-copy {
+  /*
+    Espaço do texto da história.
+  */
+  padding-right: 8px;
+}
+
+.story-copy h2 {
+  /*
+    Título da seção de história em destaque.
+  */
+  margin: 0 0 14px;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.story-copy p {
+  /*
+    Texto da apresentação da marca.
+    Usa cor mais suave e linha espaçada para facilitar leitura.
+  */
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.98rem;
+}
+
+.choice-banner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+  padding: 0 30px 28px;
+  width: 100%;
+}
+
+.choice-copy,
+.choice-image {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(120, 120, 120, 0.15);
+  padding: 28px 30px;
+}
+
+.choice-copy h3 {
+  margin: 0 0 14px;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.choice-copy p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.98rem;
+}
+
+.choice-copy ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.choice-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.quality-banner {
+  padding: 0 30px 32px;
+  width: 100%;
+}
+
+.quality-content {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(120, 120, 120, 0.15);
+  padding: 28px 32px;
+  text-align: center;
+}
+
+.quality-content h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.quality-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.98rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.site-footer {
+  /*
+    Rodapé da página com marca e links simplificados.
+  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 30px 24px;
+  background: rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(120, 120, 120, 0.15);
+  width: 100%;
+}
+
+.footer-logo {
+  width: 260px;
+  height: 150px;
+  object-fit: contain;
+  align-self: center;
+  transform: scale(1.35);
+  transform-origin: left center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-link,
+.footer-button {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  min-width: 140px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--text);
+}
+
+@media (max-width: 920px) {
+  /*
+    Ajustes para tablets e telas médias.
+  */
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    gap: 42px;
+  }
+}
+
+@media (max-width: 640px) {
+  /*
+    Ajustes para celulares.
+    A página fica mais compacta para leitura mobile.
+  */
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    height: 240px;
+  }
+
+  .hero-title {
+    letter-spacing: 0.1em;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured,
+  .story,
+  .site-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
