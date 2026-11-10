@@ -38,51 +38,65 @@ textarea {
   font-family: inherit;
 }
 
-/* 2. Barra 100% de ponta a ponta */
-.navbar {
-  width: 100%;
-  background-color: #ffffff;
-  padding: 18px 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-  margin: 0;
-}
-
-/* 3. Distribuição do logo na esquerda e do menu na direita */
-.nav-content {
-  width: 100%;
-  max-width: 100%;          /* Garante que não haja limite em pixels */
-  padding: 0 48px;          /* Afasta o logo e os links da borda da tela */
+/* CABEÇALHO IDÊNTICO AO INDEX */
+.topbar {
+  /*
+    Barra superior com fundo translúcido e divisória inferior.
+    Mantém a marca e o menu no topo da página.
+  */
+  background: rgba(255, 255, 255, 0.7);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.15);
 }
 
-.logo-img {
-  height: 52px;
-  object-fit: contain;
-  max-width: 100%;
+.brand-wrap {
+  /*
+    Alinha o logo e a marca em uma linha.
+  */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 72px;
+}
+
+.brand-wrap a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.topbar .brand-logo {
   display: block;
+  width: auto;
+  height: 68px;
+  object-fit: contain;
+  transform: scale(1.7);
+  transform-origin: left center;
 }
 
-.nav-links {
+.main-nav {
+  /*
+    organiza os links do menu horizontalmente.
+  */
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 600;
+.main-nav a {
+  /*
+    Estilo dos links do menu.
+    Letras em caixa alta, sem sublinhado e com espaçamento elegante.
+  */
   color: var(--text);
-  letter-spacing: 0.1em;
+  text-decoration: none;
   text-transform: uppercase;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--ocean-deep);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
 }
 
 /* BANNER DO CATÁLOGO */
@@ -260,10 +274,16 @@ textarea {
   }
 }
 
-@media (max-width: 600px) {
-  .nav-content {
+@media (max-width: 640px) {
+  .topbar {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
   }
 
   .products-grid {

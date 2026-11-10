@@ -13,20 +13,46 @@
 <body>
 
   <!-- CABEÇALHO -->
-  <header class="navbar">
-    <div class="nav-content">
-      <div class="logo">
-        <a href="index.html">
-          <img src="imagens/logo_maior.png" alt="Day Araújo Summer" class="logo-img">
-        </a>
-      </div>
-      <nav class="nav-links" aria-label="Navegação principal">
-        <a href="index.html">HOME</a>
-        <a href="catalogo.html" class="active">COLEÇÕES</a>
-        <a href="index.html#historia">SOBRE NÓS</a>
-        <a href="index.html#contato">CONTATO</a>
-      </nav>
+  <header class="topbar">
+    <!--
+      Cabeçalho da página.
+      É a área superior onde fica a marca e a navegação principal.
+    -->
+    <div class="brand-wrap">
+      <!--
+        Agrupa o símbolo e o nome da marca para ficarem alinhados.
+      -->
+      <a href="index.html">
+        <img class="brand-logo" src="imagens/logo_maior.png" alt="Day Araujo Summer" />
+      </a>
+      <!--
+        Nome da marca em destaque.
+        A fonte serif deixa a marca com aparência mais premium e elegante.
+      -->
     </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <!--
+        Menu principal de navegação da página.
+        aria-label ajuda leitores de tela a identificar a navegação.
+      -->
+      <a href="index.html">Home</a>
+      <!--
+        Link para a página inicial ou seção inicial.
+      -->
+      <a href="catalogo.html">Coleções</a>
+      <!--
+        Link para acionar a área de coleções da marca.
+      -->
+      <a href="index.html#historia">Sobre nós</a>
+      <!--
+        Link para a seção de história da marca.
+      -->
+      <a href="index.html#contato">Contato</a>
+      <!--
+        Link para entrar em contato com a loja.
+      -->
+    </nav>
   </header>
 
   <!-- BANNER SIMPLES DO CATÁLOGO -->

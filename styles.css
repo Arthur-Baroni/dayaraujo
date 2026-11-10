@@ -126,6 +126,12 @@ a {
   height: 72px;
 }
 
+.brand-wrap a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .topbar .brand-logo {
   display: block;
   width: auto;
