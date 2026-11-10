@@ -184,11 +184,11 @@ a {
 .hero-logo {
   position: relative;
   z-index: 1;
-  width: min(920px, 95vw);
-  height: 95%;
-  max-height: 400px;
+  width: min(520px, 85vw);
+  height: 250px;
+  max-height: 250px;
   object-fit: contain;
-  transform: scale(2.1);
+  transform: scale(1.15);
 }
 
 .hero-title {
@@ -547,7 +547,9 @@ a {
   }
 
   .hero-logo {
-    transform: scale(1.5);
+    width: min(320px, 80vw);
+    height: 170px;
+    transform: none;
   }
 
   .hero {
