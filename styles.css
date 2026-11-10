@@ -184,11 +184,11 @@ a {
 .hero-logo {
   position: relative;
   z-index: 1;
-  width: min(750px, 90vw);
-  height: 85%;
-  max-height: 340px;
+  width: min(920px, 95vw);
+  height: 95%;
+  max-height: 400px;
   object-fit: contain;
-  transform: scale(1.45);
+  transform: scale(2.1);
 }
 
 .hero-title {
@@ -303,10 +303,10 @@ a {
     Divide em imagem e texto para criar uma composição visual equilibrada.
   */
   display: grid;
-  grid-template-columns: 1.05fr 1.2fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 42px;
   align-items: center;
-  padding: 28px 30px 34px;
+  padding: 40px 36px 44px;
   background: rgba(255, 255, 255, 0.06);
   width: 100%;
 }
@@ -315,10 +315,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 260px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 440px;
 }
 
 .story-image img {
@@ -326,11 +327,9 @@ a {
     Ajusta a imagem da seção de história.
   */
   width: 100%;
-  max-width: 420px;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  padding: 18px;
 }
 
 .story-copy {
@@ -344,7 +343,7 @@ a {
   /*
     Título da seção de história em destaque.
   */
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -356,10 +355,14 @@ a {
     Texto da apresentação da marca.
     Usa cor mais suave e linha espaçada para facilitar leitura.
   */
-  margin: 0;
+  margin: 0 0 16px;
   color: var(--muted);
   line-height: 1.8;
   font-size: 0.98rem;
+}
+
+.story-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .choice-banner {
@@ -499,6 +502,12 @@ a {
 
   .story {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .story-image {
+    max-width: 380px;
+    margin: 0 auto;
   }
 
   .site-footer {
@@ -538,7 +547,7 @@ a {
   }
 
   .hero-logo {
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 
   .hero {
