@@ -123,21 +123,22 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 72px;
+  height: 80px;
 }
 
 .brand-wrap a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  height: 100%;
 }
 
 .topbar .brand-logo {
   display: block;
   width: auto;
-  height: 68px;
+  height: 76px;
   object-fit: contain;
-  transform: scale(1.7);
+  transform: scale(2.2);
   transform-origin: left center;
 }
 
@@ -181,12 +182,13 @@ a {
 }
 
 .hero-logo {
-  position: absolute;
-  top: 18px;
+  position: relative;
   z-index: 1;
-  width: 430px;
-  height: 260px;
+  width: min(750px, 90vw);
+  height: 85%;
+  max-height: 340px;
   object-fit: contain;
+  transform: scale(1.45);
 }
 
 .hero-title {
@@ -520,10 +522,23 @@ a {
     gap: 12px;
   }
 
+  .brand-wrap {
+    justify-content: center;
+  }
+
+  .topbar .brand-logo {
+    transform-origin: center center;
+    transform: scale(1.9);
+  }
+
   .main-nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px 18px;
+  }
+
+  .hero-logo {
+    transform: scale(1.2);
   }
 
   .hero {

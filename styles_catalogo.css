@@ -59,21 +59,22 @@ textarea {
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 72px;
+  height: 80px;
 }
 
 .brand-wrap a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  height: 100%;
 }
 
 .topbar .brand-logo {
   display: block;
   width: auto;
-  height: 68px;
+  height: 76px;
   object-fit: contain;
-  transform: scale(1.7);
+  transform: scale(2.2);
   transform-origin: left center;
 }
 
@@ -278,6 +279,15 @@ textarea {
   .topbar {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .brand-wrap {
+    justify-content: center;
+  }
+
+  .topbar .brand-logo {
+    transform-origin: center center;
+    transform: scale(1.9);
   }
 
   .main-nav {
