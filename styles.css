@@ -317,14 +317,21 @@ a {
   padding: 28px 30px;
 }
 
+.story-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .story-image img {
   /*
-    Ajusta a imagem da fundadora dentro da moldura padronizada.
+    Exibe a imagem inteira da fundadora proporcionalmente, sem cortes.
   */
-  width: 100%;
-  aspect-ratio: 1 / 1.15;
-  max-height: 460px;
-  object-fit: cover;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
   display: block;
 }
 
