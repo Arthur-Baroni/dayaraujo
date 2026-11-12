@@ -50,6 +50,10 @@
     <!--
       Vincula o arquivo CSS que contém todos os estilos visuais da página.
     -->
+    <link rel="icon" type="image/png" href="imagens/logo_maior.png" />
+    <!--
+      Favicon oficial da marca exibido na aba do navegador.
+    -->
   </head>
 
   <body id="topo">
@@ -151,9 +155,9 @@
               <!--
                 Preço do item.
               -->
-              <button type="button">VER DETALHES</button>
+              <a href="catalogo.html" class="product-btn">VER DETALHES</a>
               <!--
-                Botão de ação para ver mais informações sobre o produto.
+                Link para a página de catálogo do produto.
               -->
             </article>
 
@@ -161,22 +165,29 @@
               <img src="imagens/b2.jpeg" alt="Maiô breece" />
               <h3>MAIÔ BREEZE</h3>
               <p>R$ 189,90</p>
-              <button type="button">VER DETALHES</button>
+              <a href="catalogo.html" class="product-btn">VER DETALHES</a>
             </article>
 
             <article class="product-card">
               <img src="imagens/b4.jpg" alt="Biquíni rio" />
               <h3>BIQUÍNI RIO</h3>
               <p>R$ 149,90</p>
-              <button type="button">VER DETALHES</button>
+              <a href="catalogo.html" class="product-btn">VER DETALHES</a>
             </article>
 
             <article class="product-card">
               <img src="imagens/b3.jpeg" alt="Maiô costa" />
               <h3>MAIÔ COSTA</h3>
               <p>R$ 189,00</p>
-              <button type="button">VER DETALHES</button>
+              <a href="catalogo.html" class="product-btn">VER DETALHES</a>
             </article>
+          </div>
+
+          <div class="featured-action">
+            <!--
+              Botão que leva para o catálogo completo da loja.
+            -->
+            <a href="catalogo.html" class="btn-all-products">VER CATÁLOGO COMPLETO</a>
           </div>
         </section>
 
@@ -236,12 +247,19 @@
       </main>
 
       <footer class="site-footer reveal" id="contato">
-        <img class="footer-logo reveal" src="imagens/logo_maior.png" alt="Day Araujo Summer" />
+        <div class="footer-content">
+          <img class="footer-logo reveal" src="imagens/logo_maior.png" alt="Day Araujo Summer" />
 
-        <div class="footer-links reveal">
-          <a href="#topo" class="footer-link">Home</a>
-          <a href="#historia" class="footer-link">Sobre nós</a>
-          <a href="https://www.instagram.com/dayaraujosummer/" target="_blank" rel="noreferrer" class="footer-button">Instagram</a>
+          <div class="footer-links reveal">
+            <a href="#topo" class="footer-link">Home</a>
+            <a href="#historia" class="footer-link">Sobre nós</a>
+            <a href="https://www.instagram.com/dayaraujosummer/" target="_blank" rel="noreferrer" class="footer-button">Instagram</a>
+          </div>
+        </div>
+
+        <div class="footer-copy">
+          <!-- Linha simples de direitos autorais da marca -->
+          <p>© 2026 Day Araújo Summer. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
