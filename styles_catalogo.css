@@ -280,6 +280,13 @@ textarea {
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.18);
   color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.footer-button:hover {
+  background-color: var(--text);
+  border-color: var(--text);
+  color: #ffffff;
 }
 
 /* RESPONSIVIDADE */

@@ -248,6 +248,15 @@ a {
   padding: 10px 10px 16px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  /*
+    Efeito de elevação suave ao passar o cursor pelo produto.
+  */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
 }
 
 .product-card img {
@@ -286,7 +295,7 @@ a {
 .product-card .product-btn {
   /*
     Botão ou link para ver detalhes do produto no catálogo.
-    Mantém o visual minimalista e elegante.
+    Mantém o visual minimalista e elegante com efeito hover.
   */
   display: inline-block;
   text-decoration: none;
@@ -298,6 +307,14 @@ a {
   letter-spacing: 0.08em;
   font-size: 0.62rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.product-card button:hover,
+.product-card .product-btn:hover {
+  background-color: var(--text);
+  border-color: var(--text);
+  color: #ffffff;
 }
 
 .featured-action {
@@ -324,6 +341,13 @@ a {
   font-size: 0.72rem;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-all-products:hover {
+  background-color: var(--text);
+  border-color: var(--text);
+  color: #ffffff;
 }
 
 .story {
@@ -538,6 +562,13 @@ a {
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.18);
   color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.footer-button:hover {
+  background-color: var(--text);
+  border-color: var(--text);
+  color: #ffffff;
 }
 
 @media (max-width: 920px) {
